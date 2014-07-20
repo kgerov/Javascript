@@ -1,7 +1,5 @@
-function evaluate() {
-	var expression = document.getElementById("expression").value;
-	expr = expr.replace(/[^\d\+\-\*\/\.\(\)%]/g, '');
-	console.log(expression);
-	var resultWrapper = document.getElementById('result');
-	resultWrapper.innerHTML = eval(expression);
-}
+document.getElementById("calc").onclick = function () {
+	var expr = document.getElementById("expression").value
+    var result = eval(expr);
+    document.getElementById("result").innerHTML= result;
+};

@@ -2,15 +2,39 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Calculate Expression</title>
-		<style type="text/css">
+		<title>CalcExpression</title>
+		<style>
+			#wrapper {
+				width: 150px;
+				margin: 10px auto;
+			}
+			input, #result {
+				border: none;
+				background-color: #234465;
+				color: orange;
+				width: 100%;
+				padding: 15px;
+				margin-bottom: 15px;
+				margin-top: 15px;
+			}
+			input  {padding: 5px; width: 170px; height: 20px; margin-top: 0;}
+			a {
+				border: 2px solid #234465;
+				padding: 5px 10px;
+				width: 100px;
+				text-decoration: none;
+				color: #234465;
+				margin-left: 40px;
+			}
 
 		</style>
 	</head>
 	<body>
-		<input type="text" id="expression"/>
-		<input type="submit" value="Eval Result" onclick="evaluate"/>
-		<p id="result"></p>
-		<script src="calcExpression.js"></script>
+		<div id="wrapper">
+	        <input type="text" id="expression" name="expression" placeholder="I evaluate things"/>
+	        <a href="#" id="calc">Eval Result</a>
+	        <div id="result"></div>
+	    </div>
+	    <script src="calcExpression.js"></script>
 	</body>
 </html>
