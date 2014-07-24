@@ -1,0 +1,69 @@
+@font-face {
+  font-family: PT;
+  src: url(http://fonts.googleapis.com/css?family=PT+Sans);
+}
+
+#wrapper {
+	width: 600px;
+	margin: 10px auto;
+	position: relative;
+}
+
+table {
+	border: 3px solid black;
+	border-collapse: collapse;
+}
+
+tr, td {
+	border: 3px solid black;
+	width: 200px;
+	padding: 0px;
+}
+
+td button {
+	border: none;
+	background-color: green;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	font-size: 90pt;
+	color: yellow;
+}
+
+td {
+	margin-bottom: none;
+	margin-top: none;
+}
+
+#win1 {
+	position: absolute;
+	color: #e5631d;
+	font-size: 70pt;
+	top: 248px;
+	left: 2px;
+	font-weight: bold;
+	font-family: PT, sans-serif;
+	display: none;
+}
+
+#win2 {
+	position: absolute;
+	color: #e5631d;
+	font-size: 70pt;
+	top: 250px;
+	left: 30px;
+	font-weight: bold;
+	font-family: PT, sans-serif;
+	display: none;
+}
+
+#win3 {
+	position: absolute;
+	color: #e5631d;
+	font-size: 70pt;
+	top: 250px;
+	left: 152px;
+	font-weight: bold;
+	font-family: PT, sans-serif;
+	display: none;
+}
