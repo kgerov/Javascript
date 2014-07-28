@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="">
+		<title></title>
+	</head>
+	<body>
+		<div>first div</div>
+		<div>second div</div>
+		<div class="empty"></div>
+		<div>third div<div>inner div</div></div>
+		<ul id="result"></ul>
+		<script>
+			var divs = document.getElementsByTagName("div");
+			var ul = document.getElementById("result");
+
+			for(var i = 0; i < divs.length; i++){
+				if (divs[i].innerHTML != "") {
+					if (divs[i].innerHTML.indexOf("</div>") != -1) {
+						var str = "";
+						var inner = divs[i].innerHTML; 
+						var index = 0;
+						while(inner[index] != "<"){
+							str += divs[i].innerHTML[index];
+							index++;
+						}
+						str += "<br>"
+						var li = document.createElement("li");
+						li.appendChild(document.createTextNode(str));
+						ul.appendChild(li);
+						li.setAttribute("id","someLi");
+						index = inner.indexOf("<div>") + 5;
+						while(inner[index] != "<") {
+							str += divs[i].innerHTML[index];
+							index++;
+						}
+						document.getElementById("someLi").innerHTML = str;
+					} else {
+						var li = document.createElement("li");
+						li.appendChild(document.createTextNode(divs[i].innerHTML));
+						ul.appendChild(li);
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
